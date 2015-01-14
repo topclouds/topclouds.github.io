@@ -1,0 +1,81 @@
+<div class="content-page">
+    <h1>Top Clouds</h1>
+
+    <p style="text-align: center">
+        Top Clouds analyzes the <a href="http://www.alexa.com/topsites">top 100,000 web sites</a> to determine the top hosting providers.
+    </p>
+
+    <div class="helpbar">
+        <div class="dropdown">
+            <a class="dropdown-toggle">Interesting examples and findings</a>&nbsp;&nbsp;
+            <ul class="dropdown-menu">
+                <li ng-repeat="eg in examples" track by $index>
+                    <a style="border-bottom: 0" ng-click="showExample({{ $index }})">{{ eg.text }}</a>
+                </li>
+                <li style="list-style-type:none; text-align: center; padding-top: 5px">
+                    <a style="border-bottom: 0; border-top: 1px dashed #3498db;" href="https://github.com/zhenjl/topclouds/issues">Send New Findings</a>
+                </li>
+            </ul>
+        </div>
+        <div class="hint">
+        Hint: Click on chart to drill into cloud or server comparison.
+        </div>
+    </div>
+
+    <div tc-d3-column data="data" grid="grid" view="view" year="year" top="top" type="type" limit="limit" real="real" style="height: 400px; width: 850px; margin: 2rem auto 2rem auto"></div>
+
+    <div style="width: 782px; margin: 0 auto">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary" ng-model="type" btn-radio="'cloud'" ng-disabled="year !== '2012' && year !== '2011' && year !== '2010'">Cloud</button>
+            <button type="button" class="btn btn-primary" ng-model="type" btn-radio="'server'" ng-disabled="year !== '2012' && year !== '2011' && year !== '2010'">Server</button>
+        </div>
+
+        <div class="btn-group" ng-show="year === '2012' || year === '2011' || year === '2010'">
+            <button type="button" class="btn btn-primary" ng-model="year" btn-radio="'2010'">2010</button>
+            <button type="button" class="btn btn-primary" ng-model="year" btn-radio="'2011'">2011</button>
+            <button type="button" class="btn btn-primary" ng-model="year" btn-radio="'2012'">2012</button>
+        </div>
+
+        <div class="btn-group" ng-hide="year === '2012' || year === '2011' || year === '2010'">
+            <button type="button" class="btn btn-primary" ng-model="year" style="width: 150px" disabled>{{ year }}</button>
+            <button type="button" class="btn btn-primary" ng-model="year" btn-radio="getRealYear()" style="width: 58px ">Back</button>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary" ng-model="top" btn-radio="'100'">100</button>
+            <button type="button" class="btn btn-primary" ng-model="top" btn-radio="'1000'">1,000</button>
+            <button type="button" class="btn btn-primary" ng-model="top" btn-radio="'5000'">5,000</button>
+            <button type="button" class="btn btn-primary" ng-model="top" btn-radio="'10000'">10,000</button>
+            <button type="button" class="btn btn-primary" ng-model="top" btn-radio="'50000'">50,000</button>
+            <button type="button" class="btn btn-primary" ng-model="top" btn-radio="'100000'">100,000</button>
+        </div>
+    </div>
+
+    <div style="width: 500px; margin: 0 auto; padding-top: 1.5rem">
+        <div style="display:inline-block; padding-right: 0.5rem; font-size: 1.4rem"> Show</div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary" ng-model="view" btn-radio="'chart'">Chart</button>
+            <button type="button" class="btn btn-primary" ng-model="view" btn-radio="'data'">Data</button>
+        </div>
+        <div style="display:inline-block; padding-left: 0.5rem; padding-right: 0.5rem; font-size: 1.4rem"> with </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary" ng-model="limit" btn-radio="'10'">10</button>
+            <button type="button" class="btn btn-primary" ng-model="limit" btn-radio="'20'">20</button>
+            <button type="button" class="btn btn-primary" ng-model="limit" btn-radio="'50'">50</button>
+        </div>
+        <div style="display:inline-block; padding-left: 0.5rem; font-size: 1.4rem">entries.</div>
+    </div>
+
+
+    <div style="position: absolute; bottom: 3rem; width: 100%">
+        <ul style="width: 800px; list-style-type: none; margin: 0 auto; padding: 0">
+            <li style="width: 33%; text-align: left; display: inline-block"><a ng-click="slideRight();">How does it work?</a></li>
+            <li style="width: 32%; text-align: center; display: inline-block"><a href="https://github.com/zhenjl/topclouds/issues">Questions, comments, issues?</a></li>
+            <li style="width: 33%; text-align: right; display: inline-block"><a ng-click="slideLeft();">How to contribute?</a></li>
+
+        </ul>
+        <div style="width: 700px">
+        </div>
+    </div>
+
+</div>

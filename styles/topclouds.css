@@ -1,0 +1,169 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    font-family: calibri, sans-serif;
+    font-size: 62.5%;
+    font-weight: 100;
+}
+
+body {
+    font-size: 1.8rem;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+a {
+    color: #2c3e50;
+    text-decoration: none;
+    border-bottom: 1px dashed #3498db;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #3498db;
+}
+
+h1 {
+    font-size: 3.2rem;
+    font-weight: normal;
+    color: #2c3e50;
+    text-align: center;
+    white-space: normal;
+}
+
+h2 {
+    font-size: 2.6rem;
+    font-weight: 100;
+    color: #3498db;
+}
+
+.zn-pages-container {
+    height: 100%;
+}
+
+div.nav {
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0.5;
+    width: 9rem;
+    height: 9rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    position: absolute;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+div.nav > ul {
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+}
+
+div.nav > ul > li, div.nav > ul > li > img {
+    float: left;
+    font-size: 0;
+    width: 3rem;
+    height: 3rem;
+    margin: 0;
+    padding: 0;
+}
+
+ul.toc {
+    list-style: disc outside;
+    line-height: 120%;
+}
+
+ul.toc > li {
+    font-size: 1.8rem;
+}
+
+div.sidebar-page {
+    width: 250px;
+    background-color: #34495e;
+    color: #ecf0f1;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+div.sidebar-page a, div.sidebar-page h1 {
+    color: #ecf0f1;
+}
+
+div.content-page {
+    width: 90%;
+    height: 100%;
+    line-height: 150%;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    font-size: 2.0rem;
+    position: relative;
+}
+
+div.content-page p, div.content-page li {
+    line-height: 140%;
+}
+
+text.key,
+text.xlabel {
+    fill: #2c3e50;
+    font-size: 1.4rem;
+    font-weight: 100;
+}
+
+text.ylabel {
+    fill: #2c3e50;
+    font-size: 1.4rem;
+    font-weight: 100;
+}
+
+text.label {
+    font-size: 1.2rem;
+    fill: #ecf0f1;
+    font-weight: 100;
+}
+
+button {
+    font-family: calibri, sans-serif;
+    color: #ecf0f1;
+    font-weight: 100;
+    font-size: 1.2rem;
+    width: 70px;
+}
+
+.helpbar {
+    width: 850px;
+    font-size: 1.6rem;
+    margin: 2rem auto 0 auto;
+}
+
+.dropdown {
+    width: 41%;
+    margin-left: 5.5rem;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    margin-top: -0.5rem;
+    font-size: 1.4rem;
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    list-style: inside square;
+    width: 350px;
+}
+
+.hint {
+    display: inline-block;
+    text-align: right;
+    width: 50%;
+}

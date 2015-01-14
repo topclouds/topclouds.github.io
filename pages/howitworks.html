@@ -1,0 +1,62 @@
+<div class="content-page">
+
+    <h1>How Does It Work?</h1>
+
+    <p>
+        Every september, we analyzed the top web sites to determine who the top hosting providers are. The process is fairly simple:
+    <ol>
+        <li>
+            We download the <a href="http://www.alexa.com/topsites">top 1M website file from
+            Alexa</a> and we extract the top 100K.
+        </li>
+        <li>
+            We perform a DNS lookup of the web site listed in the file to get the IP address of the main website, then we do a reverse DNS lookup to get the owner of the IP.
+        </li>
+        <li>
+            We "curl" the website to get the web server information.
+        </li>
+        <li>
+            We compare the IP address with the list of known IPs for each of the cloud providers.
+        </li>
+        <li>
+            We process and present the results.
+        </li>
+    </ol>
+    </p>
+
+    <h2>Disclaimer</h2>
+    <p>
+        The data produced and presented from the above methodology is as is and we make no interpretation from it.
+        You should use your own judgement and knowledge to interpret and draw conclusions from the data.
+    </p>
+
+    <h2>Navigation</h2>
+
+    <p>
+        There are three ways to navigate this website, thanks to <a href="http://zhenjl.github.io/angular-pages">Angular Pages</a>:
+    <ol>
+        <li>
+            Use the left, right, up, down arrow keys to go to the different pages.
+        </li>
+        <li>
+            Use the navigation control at the bottom-right corner to go to different pages.
+        </li>
+        <li>
+            Swipe left, right, up, down (or click-n-drag on a desktop browser) to go to different
+            pages.
+        </li>
+    </ol>
+    </p>
+
+    <h2>License</h2>
+
+    <p>
+        The <a href="https://github.com/zhenjl/topclouds">code</a> (perl), input files and raw outputs are under
+        <a href="http://opensource.org/licenses/MIT">The MIT License</a>. The content is under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY license</a>. <br/>Feel free to fork or copy.
+    </p>
+
+    <div style="position: absolute; bottom: 3rem; width: 100%; text-align: center">
+        <a ng-click="slideLeft();">Back &gt;&gt;</a>
+    </div>
+
+</div>
